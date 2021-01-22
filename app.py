@@ -60,7 +60,7 @@ def login():
             form.username.errors = ["Incorrect Username/Password Combination"]
     return render_template("login.html", form= form)
 
-@app.route("/secret")
+@app.route("/users/<username>")
 def display_secret():
     """Shows hidden page for logged-in users only"""
 
